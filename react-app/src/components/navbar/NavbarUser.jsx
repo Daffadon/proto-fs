@@ -4,11 +4,13 @@ import { NavLink } from 'react-router-dom'
 import { useStateContext } from '../../context/AuthContext'
 
 const NavbarUser = () => {
-  const { user, setTokenToLocal } = useStateContext();
+  const { user, setTokenToLocal, setUser } = useStateContext();
   const logoutHandler = (e) => {
     e.preventDefault();
-    axiosClient.post('/logout');
-    setTokenToLocal(null);
+    axiosClient.post('/logout').then(() => {
+      setTokenToLocal(null);
+      setUser({});
+    })
   }
   return (
     <div className="flex justify-around items-center h-[10vh]">
