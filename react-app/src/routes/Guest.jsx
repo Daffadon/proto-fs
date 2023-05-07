@@ -4,7 +4,7 @@ import { useStateContext } from "../context/AuthContext"
 const GuestRoute = () => {
   const { token } = useStateContext();
   if (token) {
-    return <Navigate to={"/dashboard"} />
+    return <Navigate to={"/product"} />
   }
   return (
     <>

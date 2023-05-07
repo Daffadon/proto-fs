@@ -51,7 +51,7 @@ const Signup = () => {
                 setName(e.target.value)
               }}
               placeholder="fullname" className="border rounded px-3 outline-none py-1 placeholder-yellow-500" />
-            <input type="text" value={email}
+            <input type="email" value={email}
               onChange={e => {
                 setEmail(e.target.value)
               }}

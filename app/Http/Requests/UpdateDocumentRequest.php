@@ -24,7 +24,7 @@ class UpdateDocumentRequest extends FormRequest
         return [
             'name' => 'required|string|max:55',
             'description' => 'string',
-            'year' => 'required|integer|max:4'
+            'year' => 'required|integer'
         ];
     }
 }

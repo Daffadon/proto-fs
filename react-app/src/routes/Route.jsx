@@ -6,6 +6,7 @@ import NotFound from "../page/NotFound"
 import GuestRoute from "./Guest"
 import UserRoute from "./User"
 import Dashboard from "../page/Dashboard"
+import AddDocument from "../page/AddDocument"
 
 export const router = createBrowserRouter([
   {
@@ -39,8 +40,16 @@ export const router = createBrowserRouter([
         element: <User />
       },
       {
-        path: '/dashboard',
+        path: '/product',
         element: <Dashboard />
+      },
+      {
+        path: '/product/new',
+        element: <AddDocument key={"DocumentAdd"} />
+      },
+      {
+        path: '/product/:id',
+        element: <AddDocument key={"DocumentUpdate"} />
       },
     ]
   },
